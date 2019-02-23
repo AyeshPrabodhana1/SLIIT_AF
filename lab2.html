@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<title>Labsheet 2</title>
+</head>
+<body>
+<script>
+
+var vehicleName = 'Toyota';
+
+function  printVehicleNameOuter(){
+console.log(this.vehicleName);
+}
+console.log(this);
+
+printVehicleNameOuter();
+
+/* Q1.1****
+var vehicle = {
+vehicleName:'Nissan',
+printVehicleNameInner:printVehicleNameOuter
+};
+
+vehicle.printVehicleNameInner();
+*/
+
+/* Q1.2****
+var vehicle = {
+vehicleName:'Nissan',
+printVehicleNameInner:function(){
+return function(){
+console.log(this.vehicleName);
+}
+}
+};
+
+var execute = vehicle.printVehicleNameInner();
+
+execute();
+*/
+
+/* Q1.3****
+var vehicle = {
+vehicleName:'Nissan',
+printVehicleNameInner:function(){
+return function(){
+console.log(this.vehicleName);
+}
+}
+};
+
+var execute = vehicle.printVehicleNameInner();
+
+execute.call(vehicle);
+
+*/
+
+/* Q1.4****
+var vehicle = {
+vehicleName:'Nissan',
+printVehicleNameInner:function(){
+return function(){
+console.log(this.vehicleName);
+}
+}
+};
+
+var execute = vehicle.printVehicleNameInner().bind(vehicle);
+execute();
+
+*/
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<title>Labsheet 2</title>
+</head>
+<body>
+<script>
+
+function fetchUsers(){
+	fetch('https://api.github.com/users').then(function (response) {
+	return response.json();
+	}).then(function (json){
+		console.log(json);
+	});
+}
+
+fetchUsers();
+
+
+/*
+function fetchUsers(){
+return fetchh('https://api.github.com/users')
+.then
+
+*/
+</script>
+</body>
+
+</html>

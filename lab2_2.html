@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+<title>Labsheet 2</title>
+</head>
+<body>
+<script>
+
+function taxCalculator(Tax){
+var taxPercentage = Tax;
+return function(amount){
+return amount * Tax / 100
+}
+}
+
+var calculator = taxCalculator(10);
+
+console.log(calculator(200));
+
+
+</script>
+</body>
+
+</html>
