@@ -5,7 +5,7 @@
 <body>
 <script>
 
-var vehicleName = 'Toyota';
+var vehicleName = 'Mazda';
 
 function  printVehicleNameOuter(){
 console.log(this.vehicleName);
@@ -68,6 +68,19 @@ var execute = vehicle.printVehicleNameInner().bind(vehicle);
 execute();
 
 */
+  
+var x = {
+vehicle:'Car',
+printVehicleInner:function(){
+return function(){
+console.log(this.vehicle);
+}
+}
+};
+
+var execute = x.printVehicleInner();
+
+execute();
 
 </script>
 </body>
